@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"target": "ES2016",
+		"strict": true,
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"sourceMap": false,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
+		"allowUnreachableCode": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitOverride": true,
+		"typeRoots": ["node_modules/@types"],
+		"noEmit": true,
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true
+	},
+	"ts-node": {
+		"require": ["tsconfig-paths/register"]
+	}
+}

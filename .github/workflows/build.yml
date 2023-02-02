@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install --frozen-lockfile # runs yarn install
+
+      - name: Format, Lint, Test and Build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: prepublish
