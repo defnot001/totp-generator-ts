@@ -1,4 +1,6 @@
-![GitHub CI](https://github.com/defot001/totp-generator-ts/actions/workflows/build.yml/badge.svg)
+![CI](https://github.com/defnot001/totp-generator-ts/actions/workflows/build.yml/badge.svg)
+[![npm version](https://badge.fury.io/js/totp-generator-ts.svg)](https://badge.fury.io/js/totp-generator-ts)
+[![NPM Downloads](https://img.shields.io/npm/dm/totp-generator-ts.svg)](https://www.npmjs.com/package/totp-generator-ts)
 
 # Time-based one-time password generator (TOTP)
 
