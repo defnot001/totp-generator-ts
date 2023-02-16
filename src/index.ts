@@ -139,8 +139,3 @@ export class TokenGenerator {
 		return hex;
 	}
 }
-
-// const gen = new TokenGenerator();
-// gen.timestamp = 146532470700;
-// console.log(gen.getToken('JBSWY3DPEHPK3PXP'));
-// console.log(Date.now());
