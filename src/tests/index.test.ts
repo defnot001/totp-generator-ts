@@ -76,4 +76,16 @@ describe('TokenGenerator', () => {
 	it('should throw an error if the base32 key is an empty string', () => {
 		expect(() => tokenGen.getToken('')).toThrowError(/^Empty base32 key!$/);
 	});
+
+	it('should generate a different token after the previous one has expired', async () => {
+		const firstGen = new TokenGenerator();
+		const firstToken = firstGen.getToken('LN4EE52GEZFEEJRPMESHAVCAO4');
+
+		await new Promise(resolve => setTimeout(resolve, 30000));
+
+		const secondGen = new TokenGenerator();
+		const secondToken = secondGen.getToken('LN4EE52GEZFEEJRPMESHAVCAO4');
+
+		expect(firstToken).not.toBe(secondToken);
+	}, { timeout: 35000 });
 });
